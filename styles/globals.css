@@ -2,8 +2,11 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 62.5%;
+
+  --bg-color: #813cb9;
+  --text-color: #ece0f5;
 }
 
 a {
@@ -13,4 +16,380 @@ a {
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2.8rem;
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+  background: transparent;
+}
+
+.button {
+  display: inline-block;
+  appearance: none;
+  border: solid;
+  font-size: 2.4rem;
+  padding: 0rem 3rem;
+  min-width: 20rem;
+  border: solid 0.3rem var(--text-color);
+  background: transparent;
+  border-radius: 1rem;
+  color: var(--text-color);
+  font-family: 'Gloria Hallelujah', cursive;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.button:active {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
+/* homepage */
+.homepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 1rem 2rem;
+}
+
+.homepage h1 {
+  text-align: center;
+  padding-top: 30vh;
+}
+
+.homepage .button {
+  margin-top: 4rem;
+}
+
+.homepage .chabsies {
+  margin-top: 7rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.homepage .chabsie1 {
+  animation: blinker 1s linear infinite;
+}
+
+.homepage .chabsie2 {
+  animation: blinker 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+.homepage .chabsie2 {
+  visibility: visible;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+footer {
+  font-size: 1.6rem;
+  margin-top: auto;
+}
+
+/* presentSelect */
+
+.presentPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+.presentSelectContent {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons {
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.speechBubble {
+  padding: 1rem;
+  background-color: rgba(255, 255, 225, 0.5);
+  color: #000;
+  border-radius: 1rem;
+  width: 85%;
+  position: relative;
+}
+
+.speechBubble--dark {
+  background-color: rgba(255, 255, 225, 0.85);
+}
+
+.speechBubble::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: -0.75rem;
+  right: 1.5em;
+  border: 0.75rem solid transparent;
+  border-top: none;
+  transform: rotate(180deg);
+
+  border-bottom-color: rgba(255, 255, 255, 0.5);
+}
+.speechBubble--dark::after {
+  border-bottom-color: rgba(255, 255, 255, 0.85);
+}
+
+.chabsieSpeak {
+  margin-left: auto;
+  margin-top: 2rem;
+}
+
+/* presentChoose */
+.presentPage--choose .button {
+  min-width: 10rem;
+}
+
+.presentChooseContent {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.chabsieSpeak--opposite {
+  margin-left: 0;
+  margin-right: auto;
+  transform: scale(-1, 1);
+}
+
+.speechBubble--opposite::after {
+  left: 2.5em;
+}
+
+/* presentResult-el */
+.presentPage .bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: -1;
+}
+.presentPage .bgImage > span {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+.presentPage .bgImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.presentPage .bgImage span:after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(129, 60, 185, 0.65);
+}
+
+/* Party 1 */
+.party-team {
+  margin-top: 30vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.beats {
+  margin-left: auto;
+  margin-top: -5rem;
+  opacity: 0;
+  animation: personMove 1s ease both infinite;
+  transform-origin: center;
+  display: none;
+}
+
+.grindah {
+  margin-left: 5rem;
+  opacity: 0;
+  animation: personMove 1s ease both infinite;
+  animation-delay: 0.25s;
+  transform-origin: center;
+  display: none;
+}
+
+.steves {
+  opacity: 0;
+  animation: personMove 1s ease both infinite;
+  animation-delay: 0.5s;
+  transform-origin: center;
+  display: none;
+}
+
+@keyframes personMove {
+  0% {
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+
+  50% {
+    opacity: 1;
+    transform: rotate(30deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(-30deg);
+  }
+}
+
+.beats--static {
+  margin-left: auto;
+  margin-top: -5rem;
+  animation: none;
+  display: block;
+}
+.grinda--static {
+  margin-left: 5rem;
+  animation: none;
+  display: block;
+}
+
+.steves--static {
+  animation: none;
+  display: block;
+}
+
+.chabsie--abs1 {
+  position: absolute;
+  left: -1rem;
+  top: 45rem;
+  transform: rotate(90deg);
+  animation: chabsieMove1 3s both infinite;
+  display: none;
+}
+
+@keyframes chabsieMove1 {
+  0% {
+    left: -6rem;
+  }
+  50% {
+    left: -1rem;
+  }
+  100% {
+    left: -6rem;
+  }
+}
+.chabsie--abs2 {
+  position: absolute;
+  right: 2rem;
+  top: -1rem;
+  transform: rotate(180deg);
+  animation: chabsieMove2 3s both infinite;
+  animation-delay: 1s;
+  display: none;
+}
+
+@keyframes chabsieMove2 {
+  0% {
+    top: -6rem;
+  }
+  50% {
+    top: -1rem;
+  }
+  100% {
+    top: -6rem;
+  }
+}
+
+.chabsie--abs3 {
+  position: absolute;
+  bottom: -1rem;
+  animation: chabsieMove3 3s both infinite;
+  animation-delay: 2s;
+  display: none;
+}
+
+@keyframes chabsieMove3 {
+  0% {
+    bottom: -5rem;
+  }
+  50% {
+    bottom: -1rem;
+  }
+  100% {
+    bottom: -5rem;
+  }
+}
+
+.homepage--party-playing .chabsie--abs1,
+.homepage--party-playing .chabsie--abs2,
+.homepage--party-playing .chabsie--abs3,
+.homepage--party-playing .steves,
+.homepage--party-playing .beats,
+.homepage--party-playing .grindah {
+  display: block;
+}
+
+.homepage--party-playing .button--party {
+  display: none;
+  margin-top: 8rem;
+}
+
+.ended-text {
+  width: 100%;
+  text-align: center;
+  font-size: 2.4rem;
+  margin-top: 10vh;
+}
+
+.chabsie-abs1-static {
+  position: absolute;
+  left: -1rem;
+  top: 35rem;
+  transform: rotate(90deg);
+}
+.chabsie-abs2-static {
+  position: absolute;
+  right: 2rem;
+  top: -1rem;
+  transform: rotate(180deg);
+}
+.chabsie-abs3-static {
+  position: absolute;
+  bottom: -1rem;
 }
