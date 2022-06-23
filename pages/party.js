@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Footer from '../Components/Footer';
 import { useRouter } from 'next/router';
 
-export default function party() {
+export default function Party() {
   const mp3 = useRef();
   const container = useRef();
   const router = useRouter();

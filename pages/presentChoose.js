@@ -3,7 +3,7 @@ import Footer from '../Components/Footer';
 import Link from 'next/link';
 import Image from 'next/image';
 
-export default function presentChoose() {
+export default function PresentChoose() {
   return (
     <section className="presentPage presentPage--choose">
       <div className="presentChooseContent">
