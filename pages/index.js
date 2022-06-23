@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <section className="homepage">
       <h1>Welcome to Chabuddy G Birthday room</h1>
-      <Link href="/presentSelect">
+      <Link href="/PresentSelect">
         <a className="button">enter</a>
       </Link>
       <div className="chabsies">

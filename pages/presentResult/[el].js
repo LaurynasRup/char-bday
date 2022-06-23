@@ -20,7 +20,7 @@ export default function ResultPage({ el }) {
         </div>
       </div>
       <div className="buttons">
-        <Link href="/party2">
+        <Link href="/Party2">
           <a className="button">party again</a>
         </Link>
       </div>

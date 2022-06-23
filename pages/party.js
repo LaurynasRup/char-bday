@@ -19,7 +19,7 @@ export default function party() {
   const endMusic = () => {
     setPlaying(true);
     setEnded(true);
-    router.push('/presentSelect');
+    router.push('/PresentSelect');
   };
 
   return (

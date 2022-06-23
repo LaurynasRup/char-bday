@@ -15,10 +15,10 @@ export default function presentSelect() {
         </div>
       </div>
       <div className="buttons">
-        <Link href="/presentChoose">
+        <Link href="/PresentChoose">
           <a className="button">get present</a>
         </Link>
-        <Link href="/party">
+        <Link href="/Party">
           <a className="button">small party</a>
         </Link>
       </div>

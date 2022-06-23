@@ -17,8 +17,8 @@ export default function presentChoose() {
       </div>
       <div className="buttons">
         {['Berlin', 'Paris', 'Lisbon', 'Madrid', 'Edinburgh', 'Vienna'].map(
-          el => (
-            <Link href={`/presentResult/${el}`}>
+          (el, idx) => (
+            <Link href={`/PresentResult/${el}`} key={idx}>
               <a className="button">{el}</a>
             </Link>
           )
